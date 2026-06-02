@@ -320,6 +320,60 @@
     color: rgba(255,255,255,0.3); font-size: 12px;
   }
 
+  /* ── VALUE ── */
+  #value { background: var(--off-white); }
+  .value-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 768px) { .value-cols { grid-template-columns: 1fr; } }
+
+  .value-col {
+    border-radius: 20px; overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .value-col-header {
+    padding: 28px 28px 20px;
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .value-col.cost .value-col-header { background: #1a3a2a; }
+  .value-col.efficiency .value-col-header { background: #2C5F2D; }
+  .value-col-icon { font-size: 32px; flex-shrink: 0; }
+  .value-col-tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    color: var(--gold-light); text-transform: uppercase; margin-bottom: 4px;
+  }
+  .value-col-title { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.4; }
+
+  .value-items { background: #fff; padding: 8px 0; }
+  .value-item {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 18px 24px;
+    border-bottom: 1px solid #f0f4f0;
+  }
+  .value-item:last-child { border-bottom: none; }
+  .value-item-num {
+    font-size: 18px; font-weight: 900;
+    color: var(--green-mid); min-width: 52px;
+    flex-shrink: 0; line-height: 1.3;
+  }
+  .value-item-title { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
+  .value-item-desc { font-size: 12px; color: var(--text-light); line-height: 1.6; }
+
+  .value-summary {
+    background: var(--green-dark);
+    border-radius: 16px; padding: 32px 36px;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .value-summary-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.6;
+  }
+  .value-summary-item strong { color: var(--gold-light); }
+  .vs-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+
   /* ── SCREENS ── */
   #screens { background: #fff; }
 
@@ -797,6 +851,7 @@
   <div class="nav-links">
     <a href="#pain">痛點分析</a>
     <a href="#solution">系統功能</a>
+    <a href="#value">降本增效</a>
     <a href="#screens">產品畫面</a>
     <a href="#architecture">技術架構</a>
     <a href="#roi">導入效益</a>
@@ -958,6 +1013,118 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- VALUE -->
+<section id="value">
+  <div class="section-inner">
+    <p class="section-label">核心價值</p>
+    <h2 class="section-title">降本 · 增效，數字說話</h2>
+    <p class="section-desc">TeeHub 從兩個方向同時為球場創造價值，每一項功能都對應真實的經營改善。</p>
+
+    <div class="value-cols">
+
+      <!-- 降本 -->
+      <div class="value-col cost">
+        <div class="value-col-header">
+          <div class="value-col-icon">📉</div>
+          <div>
+            <div class="value-col-tag">降低成本</div>
+            <div class="value-col-title">讓人力專注在真正重要的事</div>
+          </div>
+        </div>
+        <div class="value-items">
+          <div class="value-item">
+            <div class="value-item-num">↓ 80%</div>
+            <div class="value-item-body">
+              <div class="value-item-title">電話接訂時間減少</div>
+              <div class="value-item-desc">LINE AI 全天候自動接受預訂，前台人員不再被電話綁住，可專注於現場服務品質</div>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item-num">↓ 40%</div>
+            <div class="value-item-body">
+              <div class="value-item-title">爽約率下降</div>
+              <div class="value-item-desc">開打前 3 天自動提醒 + 當天天氣通知，讓球友不會忘記，臨時缺席大幅減少</div>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item-num">0 件</div>
+            <div class="value-item-body">
+              <div class="value-item-title">漏接預訂</div>
+              <div class="value-item-desc">非上班時間、假日、用餐時間，AI 照樣接單，不再因為沒人接電話而流失訂單</div>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item-num">即時</div>
+            <div class="value-item-body">
+              <div class="value-item-title">異常球友自動標記</div>
+              <div class="value-item-desc">取消次數超標自動警示，管理員無需人工追蹤，高風險球友一目了然</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 增效 -->
+      <div class="value-col efficiency">
+        <div class="value-col-header">
+          <div class="value-col-icon">📈</div>
+          <div>
+            <div class="value-col-tag">提升效益</div>
+            <div class="value-col-title">讓每個空檔都變成收入</div>
+          </div>
+        </div>
+        <div class="value-items">
+          <div class="value-item">
+            <div class="value-item-num">↑ 30%</div>
+            <div class="value-item-body">
+              <div class="value-item-title">空檔時段利用率提升</div>
+              <div class="value-item-desc">晚鳥優惠一鍵推播給所有 LINE 好友，臨時空出的時段不再白白浪費</div>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item-num">24/7</div>
+            <div class="value-item-body">
+              <div class="value-item-title">全天候接受預訂</div>
+              <div class="value-item-desc">半夜想訂球？沒問題。球友隨時都能在 LINE 完成預訂，不受上班時間限制</div>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item-num">數據</div>
+            <div class="value-item-body">
+              <div class="value-item-title">需求預測輔助排班</div>
+              <div class="value-item-desc">掌握尖離峰規律、天氣影響、球友行為，提前優化人力配置與時段定價</div>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item-num">留客</div>
+            <div class="value-item-body">
+              <div class="value-item-title">球友關係主動經營</div>
+              <div class="value-item-desc">針對常客、流失球友發送專屬優惠，從被動等電話到主動出擊</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 底部總結 -->
+    <div class="value-summary">
+      <div class="value-summary-item">
+        <span class="vs-icon">⛳</span>
+        <span><strong>平台免費導入</strong>，只在 LINE 成交時才收費，球場零風險</span>
+      </div>
+      <div class="value-summary-item">
+        <span class="vs-icon">💰</span>
+        <span>每位球友 <strong>NT$50</strong> 抽成，一組 4 人 NT$200，相當於幫您賺一筆 NT$10,000+ 球局只收 <strong>2%</strong></span>
+      </div>
+      <div class="value-summary-item">
+        <span class="vs-icon">📊</span>
+        <span>所有訂單數據完整保留，未來可做 <strong>動態定價、球友分析、需求預測</strong></span>
+      </div>
+    </div>
+
   </div>
 </section>
 
